@@ -78,6 +78,15 @@
     <Compile Include="periject\assurance\tests.py" />
     <Compile Include="periject\assurance\views.py" />
     <Compile Include="periject\assurance\__init__.py" />
+    <Compile Include="periject\settings\local.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="periject\settings\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="periject\settings\production.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="periject\todo\admin.py" />
     <Compile Include="periject\todo\forms.py" />
     <Compile Include="periject\todo\management\commands\hopper.py" />
@@ -108,7 +117,7 @@
     <Compile Include="periject\supplier\views.py" />
     <Compile Include="periject\supplier\__init__.py" />
     <Compile Include="periject\__init__.py" />
-    <Compile Include="periject\settings.py" />
+    <Compile Include="periject\settings\base.py" />
     <Compile Include="periject\urls.py" />
     <Compile Include="periject\wsgi.py" />
   </ItemGroup>
@@ -169,6 +178,7 @@
     <Folder Include="periject\grc\" />
     <Folder Include="periject\grc\migrations\" />
     <Folder Include="periject\grc\templates\" />
+    <Folder Include="periject\settings\" />
     <Folder Include="periject\proj\" />
     <Folder Include="periject\proj\migrations\" />
     <Folder Include="periject\proj\templates\" />
