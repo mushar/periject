@@ -1,0 +1,40 @@
+{% extends "todo/base.html" %}
+{% block page_heading %}{% endblock %}
+{% block title %}Create a new project{% endblock %}
+{% block content %}
+
+  <h2>Add a project</h2>
+
+  <form action="" method="post">
+    {% csrf_token %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <div class="form-group">
+      <label for="id_name">Project title</label>
+      <input type="text" class="form-control" id="id_name" name="name" aria-describedby="inputNameHelp" placeholder="">
+      <small id="inputNameHelp" class="form-text text-muted">This is the name of the project.</small>
+    </div>
+</div>
+    <div class="col-sm">
+      <div class="form-group">
+      <label for="id_name">Project manager</label>
+      <input type="text" class="form-control" id="id_name" name="projectmanager1" aria-describedby="inputNameHelp" placeholder="">
+      <small id="inputNameHelp" class="form-text text-muted"></small>
+    </div>
+    </div>
+</div>
+<div class="form-group">
+      <label for="id_name">Project description</label>
+      <input type="text" class="form-control" id="id_name" name="projectdescription1" aria-describedby="inputNameHelp" placeholder="">
+      <small id="inputNameHelp" class="form-text text-muted">Please provide a breif project description.</small>
+</div>
+    <div class="form-group">
+      <label for="id_group">Project type</label>
+      {{form.group}}
+    </div>
+    <button type="submit" class="btn btn-primary">Next</button>
+  </form>
+</div>
+{% endblock %}

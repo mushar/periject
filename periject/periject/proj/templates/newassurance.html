@@ -1,0 +1,42 @@
+﻿{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>New assurance project</h1>
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    {{ question }}
+
+</div>
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="proj/newassurance/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      Question
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>
+
+{% endblock %}

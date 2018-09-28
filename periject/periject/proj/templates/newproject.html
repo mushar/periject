@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Create new project</h1>
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <a class="btn btn-primary btn-lg btn-block" href="/projects/newproject/newassurance" role="button">Assurance</a>
+    </div>
+    <div class="col-sm">
+      <a class="btn btn-primary btn-lg btn-block" href="/projects/newproject/newsupplier" role="button">Supplier management</a>
+    </div>
+    <div class="col-sm">
+      <a class="btn btn-primary btn-lg btn-block" href="/projects/newproject/newgrc" role="button">GRC</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

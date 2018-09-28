@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Dashboard</h1>
+    <p> This is where the dashboard will go</p>
+
+</div>
+{% endblock %}

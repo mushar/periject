@@ -1,0 +1,254 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>periject</Name>
+    <RootNamespace>periject</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b3678490-073b-442f-9235-a3d5509a09cb</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>periject.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="manage.py" />
+    <Compile Include="periject\account\admin.py" />
+    <Compile Include="periject\account\apps.py" />
+    <Compile Include="periject\account\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="periject\account\migrations\__init__.py" />
+    <Compile Include="periject\account\models.py" />
+    <Compile Include="periject\account\tests.py" />
+    <Compile Include="periject\account\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="periject\account\views.py" />
+    <Compile Include="periject\account\__init__.py" />
+    <Compile Include="periject\Dashboard\admin.py" />
+    <Compile Include="periject\Dashboard\apps.py" />
+    <Compile Include="periject\Dashboard\migrations\__init__.py" />
+    <Compile Include="periject\Dashboard\models.py" />
+    <Compile Include="periject\Dashboard\tests.py" />
+    <Compile Include="periject\Dashboard\views.py" />
+    <Compile Include="periject\Dashboard\__init__.py" />
+    <Compile Include="periject\grc\admin.py" />
+    <Compile Include="periject\grc\apps.py" />
+    <Compile Include="periject\grc\migrations\__init__.py" />
+    <Compile Include="periject\grc\models.py" />
+    <Compile Include="periject\grc\tests.py" />
+    <Compile Include="periject\grc\views.py" />
+    <Compile Include="periject\grc\__init__.py" />
+    <Compile Include="periject\proj\admin.py" />
+    <Compile Include="periject\proj\apps.py" />
+    <Compile Include="periject\proj\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="periject\proj\migrations\__init__.py" />
+    <Compile Include="periject\proj\models.py" />
+    <Compile Include="periject\proj\tests.py" />
+    <Compile Include="periject\proj\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="periject\proj\views.py" />
+    <Compile Include="periject\proj\__init__.py" />
+    <Compile Include="periject\assurance\admin.py" />
+    <Compile Include="periject\assurance\apps.py" />
+    <Compile Include="periject\assurance\migrations\__init__.py" />
+    <Compile Include="periject\assurance\models.py" />
+    <Compile Include="periject\assurance\tests.py" />
+    <Compile Include="periject\assurance\views.py" />
+    <Compile Include="periject\assurance\__init__.py" />
+    <Compile Include="periject\todo\admin.py" />
+    <Compile Include="periject\todo\forms.py" />
+    <Compile Include="periject\todo\management\commands\hopper.py" />
+    <Compile Include="periject\todo\management\commands\__init__.py" />
+    <Compile Include="periject\todo\management\__init__.py" />
+    <Compile Include="periject\todo\migrations\0001_initial.py" />
+    <Compile Include="periject\todo\migrations\0002_auto_20150614_2339.py" />
+    <Compile Include="periject\todo\migrations\0003_assignee_optional.py" />
+    <Compile Include="periject\todo\migrations\0004_rename_list_tasklist.py" />
+    <Compile Include="periject\todo\migrations\0005_auto_20180212_2325.py" />
+    <Compile Include="periject\todo\migrations\0006_rename_item_model.py" />
+    <Compile Include="periject\todo\migrations\0007_auto_update_created_date.py" />
+    <Compile Include="periject\todo\migrations\__init__.py" />
+    <Compile Include="periject\todo\models.py" />
+    <Compile Include="periject\todo\tests\conftest.py" />
+    <Compile Include="periject\todo\tests\test_utils.py" />
+    <Compile Include="periject\todo\tests\test_views.py" />
+    <Compile Include="periject\todo\tests\__init__.py" />
+    <Compile Include="periject\todo\urls.py" />
+    <Compile Include="periject\todo\utils.py" />
+    <Compile Include="periject\todo\views.py" />
+    <Compile Include="periject\todo\__init__.py" />
+    <Compile Include="periject\supplier\admin.py" />
+    <Compile Include="periject\supplier\apps.py" />
+    <Compile Include="periject\supplier\migrations\__init__.py" />
+    <Compile Include="periject\supplier\models.py" />
+    <Compile Include="periject\supplier\tests.py" />
+    <Compile Include="periject\supplier\views.py" />
+    <Compile Include="periject\supplier\__init__.py" />
+    <Compile Include="periject\__init__.py" />
+    <Compile Include="periject\settings.py" />
+    <Compile Include="periject\urls.py" />
+    <Compile Include="periject\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="periject\account\templates\account\login.html" />
+    <Content Include="periject\account\templates\account\logout.html" />
+    <Content Include="periject\account\templates\account\signup.html" />
+    <Content Include="periject\account\templates\account\welcome.html" />
+    <Content Include="periject\account\templates\dashboard.html.old" />
+    <Content Include="periject\account\templates\test.html" />
+    <Content Include="periject\account\templates\thanks.html" />
+    <Content Include="periject\Dashboard\templates\dashboard.html" />
+    <Content Include="periject\Dashboard\urls.py">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="periject\grc\templates\grc.html" />
+    <Content Include="periject\proj\templates\newassurance.html" />
+    <Content Include="periject\proj\templates\newgrc.html" />
+    <Content Include="periject\proj\templates\newproject.html" />
+    <Content Include="periject\proj\templates\newsupplier.html" />
+    <Content Include="periject\proj\templates\projects.html" />
+    <Content Include="periject\static\css\master.css" />
+    <Content Include="periject\assurance\templates\assurance.html" />
+    <Content Include="periject\todo\.vs\config\applicationhost.config" />
+    <Content Include="periject\todo\.vs\slnx.sqlite" />
+    <Content Include="periject\todo\static\todo\css\styles.css" />
+    <Content Include="periject\todo\static\todo\js\jquery.tablednd_0_5.js" />
+    <Content Include="periject\todo\templates\base.html" />
+    <Content Include="periject\todo\templates\todo\add_list.html" />
+    <Content Include="periject\todo\templates\todo\add_task_external.html" />
+    <Content Include="periject\todo\templates\todo\base.html" />
+    <Content Include="periject\todo\templates\todo\del_list.html" />
+    <Content Include="periject\todo\templates\todo\email\assigned_body.txt" />
+    <Content Include="periject\todo\templates\todo\email\assigned_subject.txt" />
+    <Content Include="periject\todo\templates\todo\email\newcomment_body.txt" />
+    <Content Include="periject\todo\templates\todo\include\task_edit.html" />
+    <Content Include="periject\todo\templates\todo\include\toggle_delete.html" />
+    <Content Include="periject\todo\templates\todo\list_detail.html" />
+    <Content Include="periject\todo\templates\todo\list_lists.html" />
+    <Content Include="periject\todo\templates\todo\search_results.html" />
+    <Content Include="periject\todo\templates\todo\task_detail.html" />
+    <Content Include="periject\supplier\templates\supplier.html" />
+    <Content Include="periject\templates\base.html" />
+    <Content Include="periject\templates\index.html" />
+    <Content Include="periject\templates\signup.html" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="periject\" />
+    <Folder Include="periject\account\" />
+    <Folder Include="periject\account\migrations\" />
+    <Folder Include="periject\account\templates\" />
+    <Folder Include="periject\account\templates\account\" />
+    <Folder Include="periject\Dashboard\" />
+    <Folder Include="periject\Dashboard\migrations\" />
+    <Folder Include="periject\Dashboard\templates\" />
+    <Folder Include="periject\Dashboard\templates\Dashboard\" />
+    <Folder Include="periject\grc\" />
+    <Folder Include="periject\grc\migrations\" />
+    <Folder Include="periject\grc\templates\" />
+    <Folder Include="periject\proj\" />
+    <Folder Include="periject\proj\migrations\" />
+    <Folder Include="periject\proj\templates\" />
+    <Folder Include="periject\static\" />
+    <Folder Include="periject\static\css\" />
+    <Folder Include="periject\static\periject\" />
+    <Folder Include="periject\static\periject\css\" />
+    <Folder Include="periject\static\periject\js\" />
+    <Folder Include="periject\assurance\" />
+    <Folder Include="periject\assurance\migrations\" />
+    <Folder Include="periject\assurance\templates\" />
+    <Folder Include="periject\todo\" />
+    <Folder Include="periject\todo\.vs\" />
+    <Folder Include="periject\todo\.vs\config\" />
+    <Folder Include="periject\todo\management\" />
+    <Folder Include="periject\todo\management\commands\" />
+    <Folder Include="periject\todo\migrations\" />
+    <Folder Include="periject\todo\static\" />
+    <Folder Include="periject\todo\static\todo\" />
+    <Folder Include="periject\todo\static\todo\css\" />
+    <Folder Include="periject\todo\static\todo\js\" />
+    <Folder Include="periject\todo\templates\" />
+    <Folder Include="periject\todo\templates\todo\" />
+    <Folder Include="periject\todo\templates\todo\email\" />
+    <Folder Include="periject\todo\templates\todo\include\" />
+    <Folder Include="periject\todo\tests\" />
+    <Folder Include="periject\supplier\" />
+    <Folder Include="periject\supplier\migrations\" />
+    <Folder Include="periject\supplier\templates\" />
+    <Folder Include="periject\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.6</Version>
+      <Description>env (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

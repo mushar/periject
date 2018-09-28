@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Projects</h1>
+      <br />
+    <br />
+    <a class="btn btn-primary" href="/projects/newproject/" role="button">+ Create new project</a>
+    <br />
+    <br />
+
+    
+
+    <div class="container projectstable" id="projectstable1">
+    <caption>Your open projects</caption>
+        <table class="table">
+            
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Project Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Progress</th>
+      <th scope="col">Tasks remaining</th>
+      <th scope="col">Status</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>New compliance tracker</td>
+      <td>Assurance</td>
+      <td>80%</td>
+      <td>Green</td>
+      <td>Complete</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Replacement firewalls</td>
+      <td>Assurance</td>
+      <td>50%</td>
+      <td>Amber</td>
+      <td>In progress</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Cyber essentials</td>
+      <td>GRC</td>
+      <td>75%%</td>
+      <td>Amber</td>
+      <td>In progress</td>
+    </tr>
+       <tr>
+      <th scope="row">4</th>
+      <td>Balfour Beaty</td>
+      <td>Supplier management</td>
+      <td>75%%</td>
+      <td>Amber</td>
+      <td>In progress</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    </div>
+
+</div>
+
+{% endblock %}

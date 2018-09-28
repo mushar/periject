@@ -1,0 +1,279 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Periculo compliance portal</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/master.css' %}">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <class class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Pericode</h3> 
+            </div>
+            <div id="When logged in">
+                 {% if user.is_authenticated %}
+                <ul class="list-unstyled components">
+                    
+                <!-- keep this for future drop downs
+                    <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Projects</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Vendor assurance</a>
+                        </li>
+                        <li>
+                            <a href="#">Project assurance</a>
+                        </li>
+                        <li>
+                            <a href="#">Application assurance</a>
+                        </li>
+                        <li>
+                            <a href="#">Policy, Standards, guidelines</a>
+                        </li>
+                    </ul>
+                </li>
+                    -->
+              
+                <li>
+                    <a href="/dashboard/">Dashboard</a>
+                </li>
+                <li>
+                    <a href="/projects/">Projects</a>
+                </li>
+             
+                <li>
+                    <a href="#assuranceSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Assurance</a>
+                    <ul class="collapse list-unstyled" id="assuranceSubmenu">
+                        <li>
+                            <a href="/assurance/">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#">Assurance log </a>
+                        </li>
+                        <li> 
+                            <a href="#">Tasks</a>
+                        </li>
+                    </ul>
+                </li>
+                        
+                <li>
+                 
+                    <a href="#supplierSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Supplier Management</a>
+                    <ul class="collapse list-unstyled" id="supplierSubmenu">
+                        <li>
+                            <a href="">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#">Supplier log</a>
+                        </li>
+                        <li>
+                            <a href="#">Tasks</a>
+                        </li>
+                    </ul>
+                </li>
+
+       
+          
+                <li>
+                    <a href="#governanceSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Governance</a>
+                    <ul class="collapse list-unstyled" id="governanceSubmenu">
+                        <li>
+                            <a href="/grc/">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#">Policy library</a>
+                        </li>
+                        <li>
+                            <a href="#">Process library</a>
+                        </li>
+                        <li> 
+                            <a href="#">Tasks</a>
+                        </li>
+                    </ul>
+                </li>
+                              
+                <li>
+                     
+                    <a href="#risksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Risks</a>
+                    <ul class="collapse list-unstyled" id="risksSubmenu">
+                        <li>
+                            <a href="">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#">Risk log</a>
+                        </li>
+                        <li>
+                            <a href="#">Dispensations log</a>
+                        </li>
+                        <li> 
+                            <a href="#">Tasks</a>
+                        </li>
+                    </ul>
+                </li>
+
+                              
+                <li>
+                 
+                    <a href="#complianceSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Compliance</a>
+                    <ul class="collapse list-unstyled" id="complianceSubmenu">
+                        <li>
+                            <a href="">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#">Compliance level</a>
+                        </li>
+                        <li>
+                            <a href="#">Accreditation status</a>
+                        </li>
+                        <li> 
+                            <a href="#">Tasks</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Support</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">Log a ticket</a>
+                        </li>
+                        <li>
+                            <a href="/account/logout">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+               
+            </ul>
+            </div>
+
+            <div id="When logged out">
+                 {% else %}
+                <ul class="list-unstyled components">
+                        
+                <li>
+                    <a href="/account/login">Login</a>
+                </li>
+                <li>
+                    <a href="/account/signup">Register</a>
+                </li>
+               
+            </ul>
+            </div>
+            {% endif %}
+
+            
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="periculo.co.uk" class="purchase">Purchase premium</a>
+                </li>
+                <li>
+                    <a href="periculo.co.uk" class="feedback">Leave feedback</a>
+                </li>
+
+            </ul>
+
+
+
+        </nav>
+
+
+        <!-- nav bar top-->
+        <class id="topnavbar">
+      
+        </class>
+         
+
+
+        <!-- Page Content  -->
+        <div id="content">
+
+          
+                <div class="container-fluid">
+
+                 
+                       
+                    
+                    
+
+                   
+                </div>
+            </nav>
+
+            <div class="container maincontainer">
+
+                {% block content %}
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        
+                    </button>
+
+                {% block extrahead %}{% endblock extrahead %}
+                {% block extra_js %}{% endblock extra_js %}
+
+                {% endblock%}
+
+            </div>
+    </div>
+
+        {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+       
+
+</body>
+
+</html>
